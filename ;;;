@@ -1,0 +1,56 @@
+import sys
+from calendar import week
+
+
+def testfunc(fname, lname):
+    print('Привет, %s %s' % (fname, lname))
+testfunc('Nik', 'Kalnin')
+firstname = 'Link'
+lastname = 'Zelda'
+testfunc(firstname, lastname)
+
+def savings(p_money, p_route, spending):
+    return(p_money + p_route - spending)
+print(savings(10, 10, 5))
+
+def variable_test():
+    first_variable = 100
+    second_variable = 200
+    return first_variable * second_variable
+print(variable_test())
+
+another_variable = 100
+def variable_test2():
+    first_variable = 100
+    second_variable = 20
+    return first_variable * second_variable * another_variable
+print(variable_test2())
+
+def space_build(cans):
+    total_cans = 0
+    for week in range(1, 53):
+        total_cans = total_cans + cans
+        print('week %s, cans: %s' % (week, total_cans))
+space_build(2)
+
+import time
+print(time.asctime())
+
+
+def silly_age_joke(age):
+    if age >= 10 and age <= 13:
+        print('13 + 97: sum?')
+    else:
+        print('something')
+silly_age_joke(12)
+silly_age_joke(15)
+
+def silly_age_joke():
+    print('how old are you?')
+    age = int(sys.stdin.readline())
+    if age >= 10 and age <= 13:
+        print('13 + 49 + 13: sum?')
+    else:
+        print('something')
+silly_age_joke()
+silly_age_joke()
